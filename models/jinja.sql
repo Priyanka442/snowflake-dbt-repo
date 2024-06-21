@@ -1,0 +1,1 @@
+select *,{{perc_change('amount','amount1')}} from DBT_DATABASE.DBT_SCHEMA.sales

@@ -1,0 +1,25 @@
+sources:
+  - name: source_tst
+    database: DBT_TEST
+    schema: DBT_SCHEMA
+    tables:
+      - name: pii_raw
+models:
+  - name: new_pii
+    columns:
+      - name: ID
+        tests:
+          - not_null
+      - name: gender
+        tests:
+          - accepted_values:
+              values: ['M','F']
+      - name: ID
+        tests:
+          - relationships:
+              field: ID
+              to: ref('new_pii')
+                
+
+        
+              

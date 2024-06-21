@@ -1,0 +1,5 @@
+seeds:
+  - name: dim_names
+      config:
+          coulmn_types:
+            ID: string
